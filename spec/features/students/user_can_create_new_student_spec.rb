@@ -5,10 +5,10 @@ describe 'User creates new student through /students/new' do
     name = 'Jeffrey Lebowski'
 
     visit new_student_path
-    fill_in 'student[name]', with: name
-    click_button 'Create Student'
 
-    expect(current_path).to eq student_path(student)
+    fill_in 'student[name]', with: name
+    click_button 'Submit'
+
     expect(page).to have_content(name)
   end
 end
