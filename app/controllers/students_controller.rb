@@ -4,4 +4,9 @@ class StudentsController < ApplicationController
 
     redirect_to student_path(student)
   end
+
+  private
+  def student_params
+    params.require(:student).permit(:name)
+  end
 end
