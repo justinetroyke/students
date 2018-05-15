@@ -12,11 +12,3 @@ describe 'User creates new student through /students/new' do
     expect(page).to have_content(name)
   end
 end
-
-
-# As a user
-# When I visit `/students/new`
-# And I fill in name
-# And I click submit
-# I am on the student show page
-# And I see that student's name
