@@ -5,9 +5,9 @@ describe 'User sees list of students on /students' do
     name = 'Jeffrey Lebowski'
     name_2 = 'Maude Lebowski'
     name_3 = 'Jerry Seinfeld'
-    student = Student.create!(name: name)
-    student = Student.create!(name: name_2)
-    student = Student.create!(name: name_3)
+    Student.create!(name: name)
+    Student.create!(name: name_2)
+    Student.create!(name: name_3)
 
     visit students_path
 
@@ -16,7 +16,3 @@ describe 'User sees list of students on /students' do
     expect(page).to have_content(name_3)
   end
 end
-
-# As a user
-# When I visit `/students`
-# I see a list of student names
