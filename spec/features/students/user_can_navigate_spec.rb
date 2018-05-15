@@ -76,9 +76,18 @@ describe 'User sees navigation links on all pages' do
 
     expect(current_path).to eq new_student_path
   end
-end
 
-# As a user
-# When I visit any page
-# I see links to see a list of all students,
-# or create a new student
+  scenario 'see students page when clicking on student name from index' do
+    name = 'Jeffrey Lebowski'
+    student = Student.create!(name: name)
+
+    visit students_path
+    expect(page).to have_link(name)
+
+    click_link(name)
+
+    expect(current_path).to eq student_path(student)
+    expect(page).to have_content(name)
+  end
+
+end
