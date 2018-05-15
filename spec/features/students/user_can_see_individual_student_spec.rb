@@ -10,6 +10,3 @@ describe 'User sees name of student on /student/:id' do
     expect(page).to have_content(name)
   end
 end
-# As a user
-# When I visit `/students/:id`
-# I see the name of a student
