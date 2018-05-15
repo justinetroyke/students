@@ -1,5 +1,10 @@
 <h3>All Students</h3>
 
+<a class= 'button' href=<%= new_student_path %>>Create New Student</a>
+<br>
+<a class= 'button' href=<%= students_path %>>All Students</a>
+<br>
+
 <ul>
   <% @students.each do |student| %>
   <li class=student_<%= student.id %>>
