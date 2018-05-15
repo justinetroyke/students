@@ -2,10 +2,12 @@ require 'rails_helper'
 
 describe 'User sees name of student on /student/:id' do
   scenario 'sees student name' do
-    student = Student.create!(name: 'Jeffrey Lebowski')
+    name = 'Jeffrey Lebowski'
+    student = Student.create!(name: name)
+
     visit student_path(student)
 
-    expect(page).to have_content(student.name)
+    expect(page).to have_content(name)
   end
 end
 # As a user
