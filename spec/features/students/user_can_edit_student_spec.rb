@@ -15,10 +15,3 @@ describe 'User creates edit student through /studens/id/edit' do
     expect(current_path).to eq student_path(student)
   end
 end
-
-# As a user
-# When I visit `/students/:id/edit`
-# And I enter a new name
-# And I click submit
-# I am on the student show page
-# And I can see that student's new name
